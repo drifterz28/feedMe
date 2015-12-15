@@ -39,9 +39,13 @@ module.exports = function(grunt) {
             }
         },
         copy: {
-            main: {
+            index: {
                 src: '<%= project.src %>/index.html',
                 dest: '<%= project.app %>/index.html',
+            },
+            server: {
+                src: '<%= project.src %>/server.js',
+                dest: 'server.js',
             },
         },
         jshint: {
@@ -106,6 +110,10 @@ module.exports = function(grunt) {
                 files: '<%= project.scss %>/**/*.scss',
                 tasks: ['sass']
             },
+            copy: {
+                files: '<%= project.src %>/*',
+                tasks: ['copy']
+            },
             livereload: {
                 // get live reload at
                 // https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
@@ -131,5 +139,5 @@ module.exports = function(grunt) {
     //grunt.registerTask('css', ['less']);
     grunt.registerTask('css', ['sass']);
     grunt.registerTask('img', ['imagemin']);
-    grunt.registerTask('build', ['copy:main', 'js', 'css', 'img']);
+    grunt.registerTask('build', ['copy', 'js', 'css', 'img']);
 };
