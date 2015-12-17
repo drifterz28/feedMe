@@ -1,0 +1,47 @@
+.app {
+    width: 100%;
+}
+
+.leftSection {
+    width: 240px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    border-right: 1px solid rgba(0,0,0,0.14);
+}
+
+.mainSection {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 240px;
+    background: #fafafa;
+}
+
+.feedItem {
+    flex-grow: 1;
+    float: left;
+    position: relative;
+    max-width: 260px;
+    max-height: 260px;
+    overflow: hidden;
+    border: 1px solid #{$m100};
+    .feedTitle {
+        position: absolute;
+        padding: 10px 10px 0 10px;
+        font-size: 18px;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+        background: #fff;
+    }
+    .feedSource {
+        font-size: 10px;
+    }
+}

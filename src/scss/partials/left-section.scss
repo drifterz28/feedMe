@@ -1,0 +1,32 @@
+.leftSection {
+    .mainTitle {
+        background: $m500;
+        color: $m50;
+        font-size: 30px;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .userInfo {
+        min-height: 50px;
+        width: 100%;
+        background: $m500;
+        color: $m50;
+        padding: 10px 0 0 15px;
+        font-size: 18px;
+        border-top: 1px solid;
+    }
+    .feedList {
+        a {
+            border-bottom: 1px solid rgba(0,0,0,.12);
+            padding: 6px 0 6px 10px;
+            display: block;
+            color: $m900;
+            font-size: 18px;
+            transition: background 0.2s ease;
+            text-decoration: none;
+        }
+        a:hover {
+            background: $m50;
+        }
+    }
+}

@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node server.js 8080"
+    "server": "node cluster.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/drifterz28/feedMe",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "debounce": "^1.0.0",
     "express": "^4.13.3",
     "flux": "^2.1.1",
     "grunt": "^0.4.5",
@@ -41,6 +42,7 @@
     "react": "^0.13.3",
     "react-tools": "^0.13.3",
     "reactify": "^1.1.1",
+    "recluster": "^0.4.5",
     "reflux": "^0.2.12",
     "sqlite3": "^3.1.1",
     "time-grunt": "^1.2.1",

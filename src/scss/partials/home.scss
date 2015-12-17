@@ -1,0 +1,28 @@
+.home {
+    width: 100%;
+    header {
+        height: 64px;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        position: fixed;
+        background: $m500;
+    }
+    .logo {
+        color: #fff;
+        padding-left: 40px;
+        font-weight: 400;
+        margin: 0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: 64px;
+        float: left;
+    }
+    .fb-login-button {
+        float: right;
+        line-height: 43px;
+        margin-right: 40px;
+    }
+}

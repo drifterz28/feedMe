@@ -44,8 +44,10 @@ module.exports = function(grunt) {
                 dest: '<%= project.app %>/index.html',
             },
             server: {
-                src: '<%= project.src %>/server.js',
-                dest: 'server.js',
+                expand: true,
+                src: '<%= project.src %>/*.js',
+                dest: './',
+                flatten: true,
             },
         },
         jshint: {
