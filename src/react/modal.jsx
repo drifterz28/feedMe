@@ -12,11 +12,12 @@ module.exports = React.createClass({
     onChange: function(actionObj) {
         if(actionObj.elm === 'modal') {
             this.setState({
-                displayState: 'open'
+                displayState: 'open',
+                title: actionObj.title
             });
-        }
-        console.log('modal ', actionObj);
 
+            console.log('modal ', actionObj.template);
+        }
     },
     componentDidMount: function() {
         this.unsubscribe = Store.listen(this.onChange);
@@ -33,7 +34,7 @@ module.exports = React.createClass({
         return (
             <div className={'mainModal ' + this.state.displayState}>
                 <header>
-                    <h2 className="modalTitle">Modal Title</h2>
+                    <h2 className="modalTitle">{this.state.title}</h2>
                     <div className="closeModal" onClick={this.closeModal}>X</div>
                 </header>
                 <div className="modalContent">

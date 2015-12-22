@@ -6,6 +6,7 @@
         max-width: 100%;
         width: 300px;
         height: auto;
+        transition: all 0.2s ease;
     }
     .title {
         display: block;
@@ -13,5 +14,8 @@
     &:hover {
         cursor: pointer;
         border: 1px solid #{$m800};
+        img {
+            transform: scale(1.1);
+        }
     }
 }

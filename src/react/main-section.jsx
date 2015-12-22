@@ -7,8 +7,8 @@ var FeedItem = React.createClass({
     showContent: function() {
         Actions.openModal({
             elm: 'modal',
-            type: 'content',
-            content: 'somestuff here but that will be looked at when the time comes.'
+            template: 'content',
+            title: 'some article'
         });
     },
     render: function() {

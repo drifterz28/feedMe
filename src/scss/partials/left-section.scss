@@ -1,4 +1,6 @@
 .leftSection {
+    background: #fff;
+    border-right: 1px solid rgba(0,0,0,0.14);
     .mainTitle {
         background: $m500;
         color: $m50;
@@ -15,18 +17,30 @@
         font-size: 18px;
         border-top: 1px solid;
     }
-    .feedList {
+}
+.feedList {
+    a {
+        border-bottom: 1px solid rgba(0,0,0,.12);
+        padding: 6px 0 6px 10px;
+        display: block;
+        color: $m900;
+        font-size: 18px;
+        transition: background 0.2s ease;
+        text-decoration: none;
+    }
+    a:hover {
+        background: $m50;
+    }
+    .secondFeedList {
+        display: none;
+        text-indent: 10px;
         a {
-            border-bottom: 1px solid rgba(0,0,0,.12);
-            padding: 6px 0 6px 10px;
-            display: block;
-            color: $m900;
-            font-size: 18px;
-            transition: background 0.2s ease;
-            text-decoration: none;
+            font-size: 16px;
         }
-        a:hover {
-            background: $m50;
+    }
+    .active {
+        .secondFeedList {
+            display: block;
         }
     }
 }

@@ -11,8 +11,14 @@ module.exports = Reflux.createStore({
         this.listenTo(Actions.editActivity, this.onEdit);
         this.listenTo(Actions.openModal, this.openModal);
     },
-    // ojb = {elm, type, content}
-    // elm is what element to trigger this on.
+    /*
+    trigger will trigger any watched template so I am passing things thru
+    ojb = {
+        elm: 'modal', elm is what element to trigger this on.
+        template: '', template to load up, settings, add feeds, content and so on
+        title: '', modal titile
+    }
+    */
     openModal: function(ojb) {
         this.trigger(ojb);
     },
