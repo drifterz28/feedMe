@@ -30,3 +30,15 @@ auto detect rss look for this tag <link rel="alternate" type="application/rss+xm
     "feed": "http://www.popsci.com/rss.xml"
     }
 ]
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- feedme -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4849355483930517"
+     data-ad-slot="3281342541"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>

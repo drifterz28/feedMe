@@ -9,9 +9,13 @@ module.exports = Reflux.createStore({
     init: function() {
         this.listenTo(Actions.addActivity, this.onCreate);
         this.listenTo(Actions.editActivity, this.onEdit);
-        this.listenTo(Actions.saveSettings, this.onSave);
+        this.listenTo(Actions.openModal, this.openModal);
     },
-    // called on save
+    // ojb = {elm, type, content}
+    // elm is what element to trigger this on.
+    openModal: function(ojb) {
+        this.trigger(ojb);
+    },
     onCreate: function(info) {
         _info.activities.push(info);
         this.saveInfo();

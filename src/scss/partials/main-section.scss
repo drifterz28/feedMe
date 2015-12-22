@@ -1,7 +1,7 @@
 .feedItem {
     background-color: #fff;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.16),0 0 2px 0 rgba(0,0,0,.12);
+    border: 1px solid #{$m100};
     img {
         max-width: 100%;
         width: 300px;
@@ -9,5 +9,9 @@
     }
     .title {
         display: block;
+    }
+    &:hover {
+        cursor: pointer;
+        border: 1px solid #{$m800};
     }
 }

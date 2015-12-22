@@ -3,19 +3,34 @@ var React = require('react');
 var Actions = require('../js/lib/actions');
 var Store = require('../js/lib/stores');
 
+var LeftSection = require('./left-section.jsx');
+var MainSection = require('./main-section.jsx');
+var Modal = require('./modal.jsx');
+
 module.exports = React.createClass({
-    getInitialState:function() {
+    getInitialState: function() {
+        var name = this.props.name;
+        var userId = this.props.userId;
         return {
-            works: 'Hello World'
+            name: name,
+            userId: userId
         };
     },
-    componentWillReceiveProps: function(nextProps) {
-        console.log('app next ', nextProps);
+    onChange: function(actionObj) {
+        console.log('appjs ', actionObj);
+    },
+    componentDidMount: function() {
+        this.unsubscribe = Store.listen(this.onChange);
+    },
+    componentWillUnmount: function() {
+        this.unsubscribe();
     },
     render: function() {
         return (
             <div>
-                {this.state.works}
+                <LeftSection data={this.state}/>
+                <MainSection />
+                <Modal />
             </div>
         );
     }
